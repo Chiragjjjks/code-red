@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            background-image: url('myimg.png');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        h1 {
+            color: rgb(238, 235, 235);
+        }
+        .top-segment {
+            width: 100%;
+            padding: 20px 0;
+            background-color: rgba(255, 255, 255, 0);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .file-input {
+            position: relative;
+            display: inline-block;
+        }
+        .file-input input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .btn {
+            background-color: #28a745;
+            border: none;
+            color: #000000;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #f4eaea25;
+            color: #714949;
+        }
+        .file-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+        @media (max-width: 600px) {
+            .center {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: translate(0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <div class="top-segment">
+            <h1><b>DROP YOUR VOICE FILE HERE! </b></h1>
+            <form action="new.html" method="post" enctype="multipart/form-data">
+                <div class="file-input">
+                    <input type="file" name="audiofile" accept="audio/*" required/>
+                    <button class="btn" type="button">Choose a file</button>
+                    <div class="file-info"></div>
+                </div>
+                <br></br>
+                <button class="btn" type="submit">Submit/Generate</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.file-input input').addEventListener('change', function (e) {
+            const fileInfo = document.querySelector('.file-info');
+            fileInfo.innerText = e.target.files[0].name;
+            fileInfo.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
