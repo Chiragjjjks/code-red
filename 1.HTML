@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            background-image: url('myimg.png');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            transform: translateZ(5);
+        }
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        h1 {
+            color: rgb(243, 228, 228); /* Add this line to change the color of the sentences */
+        }
+        .btn {
+            background-color: #28a745;
+            border: none;
+            color: #000000(41, 138, 190);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        }
+        
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+    transform: translateY(-2px);
+        }
+        .btn:active {
+            background-color: #45a049;
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1><b>JOINT CLASSIFICATION & SEVERITY ESTIMATION OF DYSPHONIA </b></h1>
+        <button class="btn" onclick="location.href='accept.html';">Listen to Me</button>
+    </div>
+</body>
+</html>
